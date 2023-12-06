@@ -1,0 +1,57 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+新機能と改善のために最新の PowerShell をインストールしてください!https://aka.ms/PSWindows
+
+PS C:\Users\user1> cd \Users\user1\Desktop
+PS C:\Users\user1\Desktop> mkdir github2
+
+
+    ディレクトリ: C:\Users\user1\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2023/12/06     15:14                github2
+
+
+PS C:\Users\user1\Desktop> cd github2
+PS C:\Users\user1\Desktop\github2> mkdir test
+
+
+    ディレクトリ: C:\Users\user1\Desktop\github2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2023/12/06     15:15                test
+
+
+PS C:\Users\user1\Desktop\github2> dc test
+dc : 用語 'dc' は、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。名
+前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。
+発生場所 行:1 文字:1
++ dc test
++ ~~
+    + CategoryInfo          : ObjectNotFound: (dc:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\user1\Desktop\github2> cd test
+PS C:\Users\user1\Desktop\github2\test> git init
+Initialized empty Git repository in C:/Users/user1/Desktop/github2/test/.git/
+PS C:\Users\user1\Desktop\github2\test> git add .
+PS C:\Users\user1\Desktop\github2\test> git commit -m "コミットします"
+[main (root-commit) 28e9164] コミットします
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+PS C:\Users\user1\Desktop\github2\test> git remote add origin https://github.com/miduki-yano/test.git
+PS C:\Users\user1\Desktop\github2\test> git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 423 bytes | 423.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/miduki-yano/test.git
+ * [new branch]      main -> main
+PS C:\Users\user1\Desktop\github2\test>
